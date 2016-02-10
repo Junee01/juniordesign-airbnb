@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Sharing Space</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--link bootstrap, jquery-ui, css-->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jQuery/jquery-ui.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/Sharing/SharingSpace.css">
+  <!--link js-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- header -->
+<div class="header font_grey personal_header">
+	<div class="head-comp pull-left head-comp-set">
+		<img src="images/icon.png" class="pull-left head-comp-icon">
+	</div>
+	<div class="head-comp font_grey pull-right">
+		<a href=""><span>Sangjun Park </span><span class="glyphicon glyphicon-user"></span></a>
+	</div>
+	<div class="head-comp font_grey pull-right">
+		<a href=""><span>도움말 </span><span class="glyphicon glyphicon-question-sign"></span></a>
+	</div>
+</div>
+<!--image-->
+<div class="room_photo" style="background-image:url(images/guestroom_photo01.jpg);background-size:cover;"></div>
+<!--Content-->
+<!-- 현재 올라온 댓글 리스트 -->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="panel-body">
+				<span>참여자수 4명</span>
+				<span>현재 최고가 82038원</span>
+				<br><hr>
+				<div class="row">
+					<div class="col-md-3 text-center">
+						<img src="images/SJP.jpg" class="media-photo host-profile-image">
+						<div class="name text-muted">Sangjun Park1</div>
+					</div>
+					<div class="col-md-9">
+						<span>81000원</span>
+					</div>
+				</div>
+				<br><hr>
+				<div class="row">
+					<div class="col-md-3 text-center">
+						<img src="images/SJP.jpg" class="media-photo host-profile-image">
+						<div class="name text-muted">Sangjun Park2</div>
+					</div>
+					<div class="col-md-9">
+						<span>81000원</span>
+					</div>
+				</div>
+				<br><hr>
+				<div class="row">
+					<div class="col-md-3 text-center">
+						<img src="images/SJP.jpg" class="media-photo host-profile-image">
+						<div class="name text-muted">Sangjun Park3</div>
+					</div>
+					<div class="col-md-9">
+						<span>81000원</span>
+					</div>
+				</div>
+				<br><hr>
+				<div class="row">
+					<div class="col-md-3 text-center">
+						<img src="images/SJP.jpg" class="media-photo host-profile-image">
+						<div class="name text-muted">Sangjun Park4</div>
+					</div>
+					<div class="col-md-9">
+						<span>81000원</span>
+					</div>
+				</div>
+				<br><hr>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="container-fluid">
+				<h2>경매에 참여하기</h2>
+				<hr>
+				<div class="row">
+					<div class="col-sm-12">
+						<textarea class="form-control" id="bidding1" placeholder="통화단위를 제외한 가격만 입력하세요."></textarea>
+					</div>
+				</div>
+				<br>
+				<p class="font-red"><strong>"낙찰후 미입금시, 법적인 책임이 있음을 확인합니다."</strong></p>
+				<p>위의 내용에 동의합니다.</p>
+				<br>
+				<form role="form">
+					<label class="radio-inline"><input onclick="undisableBtn()" type="radio" name="agree">동의합니다.</label>
+					<label class="radio-inline"><input onclick="disableBtn()" type="radio" name="agree">동의하지 않습니다.</label>
+				</form>
+				<br><hr>
+				<button disabled="true" id="combutton" type="button" class="btn btn-danger pull-right">경매 올리기</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Copyright (C) 2015 Junee Seoul Corporation. All Rights Reserved.<br><a href="https://www.facebook.com/sangjun.park.370" title="facebook_junee">junee_facebook</a></p>		
+</footer>
+
+<script>
+function disableBtn(){
+	document.getElementById("combutton").disabled = true;
+}
+function undisableBtn(){
+	document.getElementById("combutton").disabled = false;
+}
+</script>
+
+</body>
+</html>

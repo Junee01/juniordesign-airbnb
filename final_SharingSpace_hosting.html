@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Sharing Space</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/Sharing/SharingSpace.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+/*hosting*/
+
+/*google map js*/
+var myCenter2 = new google.maps.LatLng(37.55898, 126.998704);
+
+function initialize() {
+	var mapProp = {
+	  center:myCenter2,
+	  zoom:12,
+	  scrollwheel:true,
+	  draggable:true,
+	  mapTypeId:google.maps.MapTypeId.ROADMAP
+	  };
+
+	var map = new google.maps.Map(document.getElementById("hostMap"),mapProp);
+
+	var marker = new google.maps.Marker({
+	  position:myCenter2,
+	  });
+	
+	/*좌표 얻어서 Alert로 알리는 부분*/
+	google.maps.event.addListener(map, 'click', function(e){
+		alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng());});
+	
+	marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+/*navigation js*/
+	$(document).ready(function(){
+		$(".nav-tabs a").click(function(){
+			$(this).tab('show');
+		});
+	});
+</script>
+</head>
+<body>
+<!--header-->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Sharing Space</a>
+    </div>
+  </div>
+</nav>
+<!-- navigaion -->
+<div class="container-fluid">
+	<div class="row content">
+		<div class="col-sm-3 sidenav">
+		  <h4>호스팅(총 7단계)</h4>
+		  <ul class="nav nav-tabs nav-stacked">
+			<li class="active"><a href="#set1">기본 설정</a></li>
+			<li><a href="#set2">설명</a></li>
+			<li><a href="#set3">위치</a></li>
+			<li><a href="#set4">편의시설</a></li>
+			<li><a href="#set5">사진</a></li>
+			<li><a href="#set6">요금 설정</a></li>
+			<li><a href="#set7">프로필</a></li>
+		  </ul>
+		</div>
+		<div class="tab-content">
+		<!--기본 설정-->
+			<div class="col-sm-9 tab-pane fade in active" id="set1">
+				<div class="container-fluid">
+					<h2>게스트가 원하는 곳을 찾도록 도와 주세요.</h2>
+					<p>Space Sharing에서 검색할 때는 숙소 기본 사항으로 필터링해서 요구 사항에 맞는 공간을 찾을 수 있습니다.</p>
+					<br>
+					<hr>
+					<h2>침실 및 침대</h2>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="bedrooms">침실 수</label>
+								<select class="form-control" id="bedrooms">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6++</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="beds">침대</label>
+								<select class="form-control" id="beds">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6++</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="bathrooms">욕실</label>
+								<select class="form-control" id="bathrooms">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6++</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<h2>숙소</h2>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="bedrooms">집 유형</label>
+								<select class="form-control" id="property_type">
+									<option>아파트</option>
+									<option>단독주택</option>
+									<option>기숙사</option>
+									<option>게스트하우스</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="roomtype">숙소 유형</label>
+								<select class="form-control" id="roomtype">
+									<option>집 전체</option>
+									<option>개인실</option>
+									<option>다인실</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="accommodates">수용 인원</label>
+								<select class="form-control" id="accommodates">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6++</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="btn btn-danger pull-right">다음</button>
+				</div>
+			</div>
+			<!--설명-->
+			<div class="col-sm-9 tab-pane fade" id="set2">
+				<div class="container-fluid">
+					<h2>여행객들에게 회원님의 숙소에 대해서 알려주세요.</h2>
+					<p>Space Sharing에 있는 모든 공간은 독특합니다. 회원님 지역에서 머물 예정인 게스트에게 회원님의 숙소가 어떤 점에서 좋은지 보여주는 곳을 강조하세요.</p>
+					<br>
+					<hr>
+					<h2>숙소 이름</h2>
+					<div class="row">
+						<div class="col-sm-12">
+							<textarea class="form-control" id="listingname" placeholder="분명하고 자세히 설명하세요."></textarea>
+						</div>
+					</div>
+					<br>
+					<hr>
+					<h2>요약</h2>
+					<div class="row">
+						<div class="col-sm-12">
+							<textarea rows="5" class="form-control" id="summary" placeholder="숙소의 장점을 자랑하세요. 인테리어, 편의시설, 주변 지역에 관한 세부정보를 포함할 수 있습니다."></textarea>
+						</div>
+					</div>
+					<br>
+					<p>게스트가 회원님의 숙소와 호스팅 스타일을 알 수 있게 세부 사항을 더 적을 수 있습니다.</p>
+					<button type="button" class="btn btn-danger pull-right">다음</button>
+				</div>
+			</div>
+			<!--위치-->	
+			<div class="col-sm-9 tab-pane fade" id="set3">
+				<div class="container-fluid">
+					<h2>게스트가 숙소를 찾을 수 있도록 위치 정보를 제공하세요.</h2>
+					<p>게스트는 이 정보를 활용하여 숙소를 찾습니다.</p>
+					<br>
+					<hr>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="form-group">
+								<label for="country">국가</label>
+								<select class="form-control" id="country">
+									<option>한국</option>
+									<option>일본</option>
+									<option>미국</option>
+									<option>중국</option>
+									<option>프랑스</option>
+									<option>독일</option>
+									<option>대만</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="state">도/시</label>
+								<input type="text" class="form-control" id="state" placeholder="Seoul">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="city">구/시</label>
+								<input type="text" class="form-control" id="city" placeholder="Seocho-gu">
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="form-group">
+								<label for="streetaddress">도로명 / 건물번호 / 아파트 이름 / 건물 이름</label>
+								<input type="text" class="form-control" id="streetaddress" placeholder="예) 언주로 406">
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="form-group">
+								<label for="aptsuitebldg">빌딩 번호, 빌딩/아파트 이름(및 호실)</label>
+								<input type="text" class="form-control" id="aptsuitebldg" placeholder="예) 35동 4층 407호">
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<div class="form-group">
+								<label for="zipcode">우편번호</label>
+								<input type="text" class="form-control" id="zipcode" placeholder="예) 135-919">
+							</div>
+						</div>
+					</div>
+					<hr>
+					<div id="hostMap" class="googlemapsize"></div>
+					<br>
+					<!--위도와 경도 표시하기 위해서 임시로 정의-->
+					<div class="row">
+						<div class="col-sm-6">
+							<input type="text" placeholder="Latitude">
+						</div>
+						<div class="col-sm-6">
+							<input type="text" placeholder="Longitude">
+						</div>
+					</div>
+					<hr>
+					<button type="button" class="btn btn-danger pull-right">주소 저장 및 다음</button>
+				</div>
+			</div>
+			<!--편의시설-->	
+			<div class="col-sm-9 tab-pane fade" id="set4">
+				<div class="container-fluid">
+					<h2>여행객들에게 회원님의 숙소에 대해서 알려주세요.</h2>
+					<p>Sharing Space에 있는 모든 공간은 독특합니다. 회원님 지역에서 머물 예정인 게스트에게 회원님의 숙소가 어떤 점에서 좋은지 보여주는 곳을 강조하세요.</p>
+					<br>
+					<hr>
+					<h2>기본 편의시설</h2>
+					<ul class="checkbox">
+						<li><label><input type="checkbox">필수품목</li>
+						<li><label><input type="checkbox">TV</li>
+						<li><label><input type="checkbox">에어컨</li>
+						<li><label><input type="checkbox">난방</li>
+						<li><label><input type="checkbox">와이파이</li>
+					</ul>
+					<br>
+					<hr>
+					<h2>특별 시설</h2>
+					<ul class="checkbox">
+						<li><label><input type="checkbox">흡연가능</li>
+						<li><label><input type="checkbox">애완동물 입실 가능</li>
+						<li><label><input type="checkbox">휠체어 사용 가능</li>
+					</ul>
+					<button type="button" class="btn btn-danger pull-right">다음</button>
+				</div>
+			</div>
+			<!--사진-->
+			<div class="col-sm-9 tab-pane fade" id="set5">
+				<div class="container-fluid">
+					<h2>사진을 더하면 숙소를 실감하게 보여줄 수 있습니다.</h2>
+					<p>게스트가 이용할 수 있는 구역의 사진을 올리세요. 언제든 사진을 추가할 수 있습니다.</p>
+					<button type="button" class="btn btn-default pull-left">사진 추가하기</button>
+					<br>
+					<hr>
+					<img src="#" class="uploadimg">
+					<br>
+					<button type="button" class="btn btn-danger pull-right">다음</button>
+				</div>
+			</div>
+			<!--요금 설정-->
+			<div class="col-sm-9 tab-pane fade" id="set6">
+				<div class="container-fluid">
+					<h2>숙소의 1박 가격을 설정하세요</h2>
+					<p>숙소, 편의시설, 손님맞이 수준을 반영해서 가격을 설정할 수 있습니다.</p>
+					<h2>기본 요금</h2>
+					<div class="row">
+						<div class="col-sm-6">
+							<label for="nightlyprice">1박당 가격</label>
+							<input type="text" class="form-control" id="nightlyprice">
+						</div>
+						<div class="col-sm-6">
+							<label for="currency">통화단위</label>
+							<select class="form-control" id="currency">
+									<option>KRW</option>
+									<option>JPY</option>
+									<option>USD</option>
+									<option>EUR</option>
+									<option>CAD</option>
+							</select>
+						</div>
+					</div>
+					<br>
+					<p>주당 및 월당가격을 설정해서 오래 머무는 게스트에게 할인을 해 줄 수 있습니다.</p>
+					<br>
+					<hr>
+					<button type="button" class="btn btn-danger pull-right">다음</button>
+				</div>
+			</div>
+			<!--프로필-->
+			<div class="col-sm-9 tab-pane fade" id="set7">
+				<div class="container-fluid">
+					<h2>프로필 완성하기</h2>
+					<p>게스트와 호스트 모두 완전한 프로필 정보를 제공해야 합니다.</p>
+					<br>
+					<hr>
+					<h2>프로필 사진</h2>
+					<p>숙소에 친근한 얼굴을 더하세요.</p>
+					<button type="button" class="btn btn-default pull-left">사진 추가하기</button>
+					<br>
+					<hr>
+					<img src="#" class="uploadimg">
+					<br>
+					<hr>
+					<h2>전화번호</h2>
+					<p>모든 게스트에게 표시됩니다.</p>
+					<div class="input-group">
+						<span class="input-group-addon">+82</span>
+						<input type="text" class="form-control" placeholder="010-9271-4555">
+					</div>
+					<br>
+					<hr>
+					<button type="button" class="btn btn-primary pull-left">완료하기</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Copyright (C) 2015 Junee Seoul Corporation. All Rights Reserved.<br><a href="https://www.facebook.com/sangjun.park.370" title="facebook_junee">junee_facebook</a></p>		
+</footer>
+</body>
+</html>

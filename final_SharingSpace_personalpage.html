@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Sharing Space</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jQuery/jquery-ui.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/Sharing/SharingSpace.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- header -->
+<div class="header font_grey personal_header">
+	<div class="head-comp pull-left head-comp-set">
+		<img src="images/icon.png" class="pull-left head-comp-icon">
+	</div>
+	<div class="head-comp font_grey pull-right">
+		<a href=""><span>Sangjun Park </span><span class="glyphicon glyphicon-user"></span></a>
+	</div>
+	<div class="head-comp font_grey pull-right">
+		<a href=""><span>도움말 </span><span class="glyphicon glyphicon-question-sign"></span></a>
+	</div>
+</div>
+<!--image-->
+<div class="room_photo" style="background-image:url(images/guestroom_photo01.jpg);background-size:cover;"></div>
+<!--Content-->
+<div class="container-fluid font_grey">
+	<div class="row">
+		<div class="col-lg-8">
+			<div class="row">
+				<!-- 사진 -->
+				<div class="col-md-3 text-center">
+					<div class="media-photo">
+						<img height="115" width="115" src="images/SJP.jpg">
+					</div>
+				</div>
+				<!-- 공간 소개 -->
+				<div class="col-md-9">
+					<h1 class="font24">역세권에 개인 테라스와 전망 좋은집!</h1>
+					<p>강남구, 서울, 한국</p>
+					<div class="row row-condensed text-center">
+						<div class="col-sm-3">
+							<img src="images/home.png" class="image_icon"></span>
+						</div>
+						<div class="col-sm-3">
+							<img src="images/people.png" class="image_icon"></span>
+						</div>
+						<div class="col-sm-3">
+							<img src="images/door.png" class="image_icon"></span>
+						</div>
+						<div class="col-sm-3">
+							<img src="images/bed.png" class="image_icon"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 기본 정보 -->
+			<div class="row text-center">
+				<div class="col-md-3">
+					Sangjun Park
+				</div>
+				<div class="col-md-9">
+					<div class="row row-condensed">
+						<div class="col-sm-3">집 전체</div>
+						<div class="col-sm-3">최대 숙박가능 인원 5명</div>
+						<div class="col-sm-3">침실 3개</div>
+						<div class="col-sm-3">침대 3개</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 예약 하기 -->
+		<div class="col-lg-4">
+			<div class="book-it">
+				<div class="book-it__price">
+					<div class="book-it_price-amount pull-left">34000원</div>
+					<div class="book-it_price-amount pull-right">1박</div>
+				</div>
+				<div class="row row-condensed space-3">
+					<div class="col-md-9">
+						<div class="row row-condensed">
+							<div class="col-sm-6 space-1-sm">
+								<label for="checkin" class="boot-it__label">체크인</label>
+								<input class="checkin ui-datepicker-target" id="checkin" placeholder="yyyy/mm/일일" type="text">
+							</div>
+							<div class="col-sm-6 space-1-sm">
+								<label for="checkout" class="boot-it__label">체크아웃</label>
+								<input class="checkin ui-datepicker-target" id="checkout" placeholder="yyyy/mm/일일" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 space-1-sm">
+						<label for="number_of_guests" class="number-of-guest">게스트</label>
+						<div class="select select-block">
+							<select id="number_of_guests" name="number_of_guests">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<button type="submit" class="btn btn-large btn-primary btn-block">
+					<span>예약 요청</span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Details-->
+<div class="jumbotron jumbotron-detail">
+	<h4>상세 설명</h4>
+	<div class="panel_personal font-black">
+		<div class="panel-body">
+			Sharing Space를 통해 주택에서부터 아파트, 트리하우스, 이글루에 이르기까지 이색적인 숙소를 찾으실 수 있습니다. 숙소에 대한 설명은 아래의 숙소 상세정보를 참조하세요. 궁금한 점이 있으시면, 호스트에게 직접 연락하시기 바랍니다.
+		</div>
+	</div>
+	<br>
+	<a href="#"><span>호스트에게 연락하기</span></a>
+	<br>
+	<hr>
+	<div class="row">
+		<div class="col-md-3 text-muted">
+			<span>숙소</span>
+		</div>
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-6">
+					<div>
+					<span>숙박가능 인원:</span>
+					<span></span>
+					<span>5</span>
+					</div>
+					<div>
+					<span>욕실:</span>
+					<span></span>
+					<span>1</span>
+					</div>
+					<div>
+					<span>침실:</span>
+					<span></span>
+					<span>3</span>
+					</div>
+					<div>
+					<span>침대:</span>
+					<span></span>
+					<span>3</span>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div>
+					<span>집 유형:</span>
+					<span></span>
+					<span>아파트</span>
+					</div>
+					<div>
+					<span>숙소 유형:</span>
+					<span></span>
+					<span>집 전체</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<hr>
+	<div class="row">
+		<div class="col-md-3 text-muted">
+			<span>시설</span>
+		</div>
+		<div class="col-md-9">
+			<div class="row">
+				<div class="col-md-12">
+				<div>필수품목</div>
+				<div>TV</div>
+				<div>난방</div>
+				<div>와이파이</div>
+				<div>애완동물 입실 가능</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<hr>
+	<div class="row">
+		<div class="col-md-3 text-muted">
+			<span>가격</span>
+		</div>
+		<div class="col-md-9">
+			<span>1박당 가격:</span>
+			<span><strong>34000원</strong></span>
+		</div>
+	</div>
+	<br>
+	<hr>
+	<div class="row">
+		<div class="col-md-3 text-muted">
+			<span>설명</span>
+		</div>
+		<div class="col-md-9">
+			<span>2013년에 지어진 신축으로 외관과 내관이 모두 깔끔하고 몇 안되는 테라스를 가지고있는 방입니다. 남향으로 따듯하고 테라스에서 보이는 뷰 또한 주변에 큰 건물이 없어서 확 트흰 공간을 자랑합니다. 저희 집은 소형아파트로 1-2명이 살기 위해 적합하게 지어진 집입니다. 안락하고 편안하게 보내기에 최적의 집이라 생각합니다.</span>
+		</div>
+	</div>
+	<br><hr>
+	<div class="row">
+		<div class="col-md-3 text-muted">
+			<span>계좌번호</span>
+		</div>
+		<div class="col-md-9">
+			<div>
+			<span>신한은행 : 1013029382</span>
+			<span></span>
+			<span>(Sangjun Park)</span>
+			</div>
+			<div><span>연락처 : </span>
+			<span></span>
+			<span>010-9271-4555</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Comments part-->
+<div class="container-fluid container-comment">
+	<div class="panel-body">
+		<span>후기 2개</span>
+		<br><hr>
+		<div class="row">
+			<div class="col-md-3 text-center">
+				<img src="images/SJP.jpg" class="media-photo host-profile-image">
+				<div class="name text-muted">Sangjun Park</div>
+			</div>
+			<div class="col-md-9">
+				<span>지하철 입구와 가깝고 깨끗하고 너무 좋아요.밤에 조용하고 잠이 편하게 잘 들었어요.진짜 완전 마음에 들었어요.다음에 또 서울 여행 떠날 거면 꼭 다시 여기로 예약할 겁니다.</span>
+			</div>
+		</div>
+		<br><hr>
+		<div class="row">
+			<div class="col-md-3 text-center">
+				<img src="images/SJP.jpg" class="media-photo host-profile-image">
+				<div class="name text-muted">Sangjun Park</div>
+			</div>
+			<div class="col-md-9">
+				<span>지하철 입구와 가깝고 깨끗하고 너무 좋아요.밤에 조용하고 잠이 편하게 잘 들었어요.진짜 완전 마음에 들었어요.다음에 또 서울 여행 떠날 거면 꼭 다시 여기로 예약할 겁니다.</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- footer -->
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Copyright (C) 2015 Junee Seoul Corporation. All Rights Reserved.<br><a href="https://www.facebook.com/sangjun.park.370" title="facebook_junee">junee_facebook</a></p>		
+</footer>
+
+<!-- jQuery-ui datepicker-->
+<script src="js/jQuery/jquery-ui.min.js"></script>
+<script>
+$( "#checkin" ).datepicker({
+	inline: true
+});
+$("#checkout").datepicker({
+	inline: true
+});
+</script>
+
+</body>
+</html>

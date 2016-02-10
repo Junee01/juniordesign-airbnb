@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Sharing Space</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--link bootstrap, jquery-ui, css-->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jQuery/jquery-ui.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/Sharing/SharingSpace.css">
+  <!--link js-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- header -->
+<div class="header font_grey personal_header">
+	<div class="head-comp pull-left head-comp-set">
+		<img src="images/icon.png" class="pull-left head-comp-icon">
+	</div>
+	<div class="head-comp font_grey pull-right">
+		<a href=""><span>Sangjun Park </span><span class="glyphicon glyphicon-user"></span></a>
+	</div>
+	<div class="head-comp font_grey pull-right">
+		<a href=""><span>도움말 </span><span class="glyphicon glyphicon-question-sign"></span></a>
+	</div>
+</div>
+<!--검색 조건-->
+<div class="row">
+	<div class="col-md-8">
+		<!-- 날짜 -->
+		<div class="row">
+			<div class="col-lg-2 text-center"><label>날짜</label></div>
+			<div class="col-lg-10">
+				<div class="row row-condensed">
+					<div class="col-md-4">
+						<input class="checkin ui-datepicker-target" id="checkin" placeholder="yyyy/mm/일일" type="text">
+					</div>
+					<div class="col-md-4">
+						<input class="checkin ui-datepicker-target" id="checkout" placeholder="yyyy/mm/일일" type="text">
+					</div>
+					<div class="col-md-4">
+						<div class="select">
+							<select class="selecter-pad">
+								<option value="1">최대 숙박가능 인원 1명</option>
+								<option value="2">최대 숙박가능 인원 2명</option>
+								<option value="3">최대 숙박가능 인원 3명</option>
+								<option value="4">최대 숙박가능 인원 4명</option>
+								<option value="5">최대 숙박가능 인원 5명</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!-- 숙소 유형 -->
+		<div class="row">
+			<div class="col-lg-2 text-center"><label>숙소 유형</label></div>
+			<div class="col-lg-10">
+				<div class="row row-condensed">
+					<div class="col-sm-4">
+						<label class="checkbox">
+							<div class="row">
+								<div class="col-md-10">
+									<img src="images/home.png" class="image_icon">
+									<span>집 전체</span>
+								</div>
+								<div class="col-md-2">
+									<input type="checkbox" name="room-type">
+								</div>
+							</div>
+						</label>
+					</div>
+					<div class="col-sm-4">
+						<label class="checkbox">
+							<div class="row">
+								<div class="col-md-10">
+									<img src="images/door.png" class="image_icon">
+									<span>개인실</span>
+								</div>
+								<div class="col-md-2">
+									<input type="checkbox" name="room-type">
+								</div>
+							</div>
+						</label>
+					</div>
+					<div class="col-sm-4">
+						<label class="checkbox">
+							<div class="row">
+								<div class="col-md-10">
+									<img src="images/sofa.png" class="image_icon">
+									<span>다인실</span>
+								</div>
+								<div class="col-md-2">
+									<input type="checkbox" name="room-type">
+								</div>
+							</div>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!-- 가격 범위 -->
+		<div class="row">
+			<div class="col-lg-2 text-center"><label>가격 범위</label></div>
+			<div class="col-lg-10">
+				<div class="row row-condensed">
+					<div class="col-md-5">
+						<input type="text" class="form-control" placeholder="최소 가격">
+					</div>
+					<div class="col-md-1 text-center">
+						~
+					</div>
+					<div class="col-md-5">
+						<input type="text" class="form-control" placeholder="최대 가격">
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<!-- 공간 리스트 -->
+		<div class="jumbotron jumbotron-list">
+			<div class="row">
+				<div class="col-lg-6">
+					<div><img src="images/guestroom_photo01.jpg" class="guestroom_list"></div>
+					<div class="row">
+						<div class="col-md-10">
+							<div><a href="">역세권에 개인 테라스와 전망 좋은집</a></div>
+							<div>후기 3개, 35000원</div>
+						</div>
+						<div class="col-md-2">
+							<img src="images/SJP.jpg" class="media-photo host-profile-image-list">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div><img src="images/guestroom_photo01.jpg" class="guestroom_list"></div>
+					<div class="row">
+						<div class="col-md-10">
+							<div><a href="">역세권에 개인 테라스와 전망 좋은집</a></div>
+							<div>후기 3개, 35000원</div>
+						</div>
+						<div class="col-md-2">
+							<img src="images/SJP.jpg" class="media-photo host-profile-image-list">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div><img src="images/guestroom_photo01.jpg" class="guestroom_list"></div>
+					<div class="row">
+						<div class="col-md-10">
+							<div><a href="">역세권에 개인 테라스와 전망 좋은집</a></div>
+							<div>후기 3개, 35000원</div>
+						</div>
+						<div class="col-md-2">
+							<img src="images/SJP.jpg" class="media-photo host-profile-image-list">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div><img src="images/guestroom_photo01.jpg" class="guestroom_list"></div>
+					<div class="row">
+						<div class="col-md-10">
+							<div><a href="">역세권에 개인 테라스와 전망 좋은집</a></div>
+							<div>후기 3개, 35000원</div>
+						</div>
+						<div class="col-md-2">
+							<img src="images/SJP.jpg" class="media-photo host-profile-image-list">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 지도 부분 -->
+	<div class="col-md-4">
+		<div id="hostMap" class="googlemapsize-list"></div>
+	</div>
+</div>
+
+<!-- footer -->
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Copyright (C) 2015 Junee Seoul Corporation. All Rights Reserved.<br><a href="https://www.facebook.com/sangjun.park.370" title="facebook_junee">junee_facebook</a></p>		
+</footer>
+
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+/*google map js*/
+var myCenter = new google.maps.LatLng(37.558983, 126.998704);
+
+function initialize() {
+	var mapProp = {
+	  center:myCenter,
+	  zoom:12,
+	  scrollwheel:true,
+	  draggable:true,
+	  mapTypeId:google.maps.MapTypeId.ROADMAP
+	  };
+
+	var map = new google.maps.Map(document.getElementById("hostMap"),mapProp);
+
+	var marker = new google.maps.Marker({
+	  position:myCenter,
+	  });
+	
+	/*좌표 얻어서 Alert로 알리는 부분*/
+	google.maps.event.addListener(map, 'click', function(e){
+		alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng());});
+	
+	marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<!-- jQuery-ui datepicker-->
+<script src="js/jQuery/jquery-ui.min.js"></script>
+<script>
+$( "#checkin" ).datepicker({
+	inline: true
+});
+$("#checkout").datepicker({
+	inline: true
+});
+</script>
+
+<!-- agreement js -->
+<script>
+function disableBtn(){
+	document.getElementById("combutton").disabled = true;
+}
+function undisableBtn(){
+	document.getElementById("combutton").disabled = false;
+}
+</script>
+
+</body>
+</html>

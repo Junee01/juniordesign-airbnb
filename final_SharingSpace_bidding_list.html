@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Sharing Space</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--link bootstrap, jquery-ui, css-->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jQuery/jquery-ui.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/Sharing/SharingSpace.css">
+  <!--link js-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- header -->
+<div class="header font_grey personal_header">
+	<div class="head-comp pull-left head-comp-set">
+		<img src="images/icon.png" class="pull-left head-comp-icon">
+	</div>
+	<div class="head-comp font_grey pull-right">
+		<a href=""><span>Sangjun Park </span><span class="glyphicon glyphicon-user"></span></a>
+	</div>
+	<div class="head-comp font_grey pull-right">
+		<a href=""><span>도움말 </span><span class="glyphicon glyphicon-question-sign"></span></a>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+		<hr>
+		<!-- 타이틀 -->
+		<div class="row">
+			<div class="col-sm-12 text-center"><h2>지금 저렴한 가격으로 올라온 공간을 살펴보세요!</h2></div>
+			<div class="col-sm-12 text-center"><p>"비딩은 호스트가 평소보다 30% 저렴하게 공간을 내놓고 소비자가 경매를 통하여 낙찰받는 시스템입니다."</p></div>
+		</div>
+		<hr>
+		<!-- 리스트 목록 -->
+		<div class="jumbotron jumbotron-list">
+			<div class="row">
+				<div class="col-lg-6">
+					<div><img src="images/guestroom_photo01.jpg" class="guestroom_list"></div>
+					<div class="row">
+						<div class="col-md-10">
+							<div><a href="">역세권에 개인 테라스와 전망 좋은집</a></div>
+							<div>후기 3개, 35000원</div>
+						</div>
+						<div class="col-md-2">
+							<img src="images/SJP.jpg" class="media-photo host-profile-image-list">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div><img src="images/guestroom_photo01.jpg" class="guestroom_list"></div>
+					<div class="row">
+						<div class="col-md-10">
+							<div><a href="">역세권에 개인 테라스와 전망 좋은집</a></div>
+							<div>후기 3개, 35000원</div>
+						</div>
+						<div class="col-md-2">
+							<img src="images/SJP.jpg" class="media-photo host-profile-image-list">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div><img src="images/guestroom_photo01.jpg" class="guestroom_list"></div>
+					<div class="row">
+						<div class="col-md-10">
+							<div><a href="">역세권에 개인 테라스와 전망 좋은집</a></div>
+							<div>후기 3개, 35000원</div>
+						</div>
+						<div class="col-md-2">
+							<img src="images/SJP.jpg" class="media-photo host-profile-image-list">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div><img src="images/guestroom_photo01.jpg" class="guestroom_list"></div>
+					<div class="row">
+						<div class="col-md-10">
+							<div><a href="">역세권에 개인 테라스와 전망 좋은집</a></div>
+							<div>후기 3개, 35000원</div>
+						</div>
+						<div class="col-md-2">
+							<img src="images/SJP.jpg" class="media-photo host-profile-image-list">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 구글 지도 부분 -->
+	<div class="col-md-4">
+		<div id="hostMap" class="googlemapsize-list"></div>
+	</div>
+</div>
+
+<!-- footer -->
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Copyright (C) 2015 Junee Seoul Corporation. All Rights Reserved.<br><a href="https://www.facebook.com/sangjun.park.370" title="facebook_junee">junee_facebook</a></p>		
+</footer>
+
+<!-- Add Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+/*google map js*/
+var myCenter = new google.maps.LatLng(37.558983, 126.998704);
+
+function initialize() {
+	var mapProp = {
+	  center:myCenter,
+	  zoom:12,
+	  scrollwheel:true,
+	  draggable:true,
+	  mapTypeId:google.maps.MapTypeId.ROADMAP
+	  };
+
+	var map = new google.maps.Map(document.getElementById("hostMap"),mapProp);
+
+	var marker = new google.maps.Marker({
+	  position:myCenter,
+	  });
+	
+	/*좌표 얻어서 Alert로 알리는 부분*/
+	google.maps.event.addListener(map, 'click', function(e){
+		alert("Latitude: " + e.latLng.lat() + "\r\nLongitude: " + e.latLng.lng());});
+	
+	marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<!-- jQuery-ui datepicker-->
+<script src="js/jQuery/jquery-ui.min.js"></script>
+<script>
+$( "#checkin" ).datepicker({
+	inline: true
+});
+$("#checkout").datepicker({
+	inline: true
+});
+</script>
+
+<!-- agreement js -->
+<script>
+function disableBtn(){
+	document.getElementById("combutton").disabled = true;
+}
+function undisableBtn(){
+	document.getElementById("combutton").disabled = false;
+}
+</script>
+
+</body>
+</html>
